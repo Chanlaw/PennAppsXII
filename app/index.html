@@ -15,62 +15,95 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/angular-chart.css">
 
+    <!-- These are my things -->
+
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Upstairs is my stuff -->
+
     <script src="scripts/vendor/Chart.min.js"></script>
     <script src="scripts/vendor/angular-chart.js"></script>
 
     <!-- endbuild -->
   </head>
-  <body ng-app="app">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">pennAppsXii</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" ng-controller="main">
-        <canvas id="line" class="chart chart-line" chart-data="data"
-        chart-labels="labels" chart-legend="true" chart-series="series"
-        chart-click="onClick" >
-        
-      </canvas> 
-      <div ng-repeat="serie in series">
-        <p> yay </p>
-
-      </div>
-    </div>
-
-    <div class="footer">
+  <body ng-app= "app">
+    <div class="nav">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span></p>
+        <ul class= "pull-left nav nav-pills">
+          <li><a href="#">Name</a></li>
+          <li><a href="#">Browse</a></li>
+        </ul>
+        <ul class= "pull-right nav nav-pills">
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
       </div>
     </div>
 
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Pet Rocks!</h1>
+        <p>Play with a million pet rock owners worldwide!</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div> 
+    <div class="neighborhood-guides">
+        <div class ="container">
+            <h2>Neighborhood Guides</h2>
+            <p>Not sure where to stay? We've created neighborhood guides for cities all around the world.</p>
+            <div class ="row">
+                <div class ="col-md-4">
+                    <div class="thumbnail">
+                        <img src= "http://goo.gl/0sX3jq">
+                    </div>
+                    <div class ="thumbnail">
+                        <img src= "http://goo.gl/an2HXY">
+                    </div>
+                </div>
+                <div class ="col-md-4">
+                </div>
+                <div class ="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+    <div class="learn-more">
+    <div class="container">
+    <div class= "row">
+        <div class ="col-md-4">
+      <h3>Travel</h3>
+      <p>From apartments and rooms to treehouses and boats: stay in unique spaces in 192 countries.</p>
+      <p><a href="#">See how to travel on Airbnb</a></p>
+        </div>
+      <div class= "col md-4">
+      <h3>Host</h3>
+      <p>Renting out your unused space could pay your bills or fund your next vacation.</p>
+      <p><a href="#">Learn more about hosting</a></p>
+      </div>
+      <div class= "col md-4">
+      <h3>Trust and Safety</h3>
+      <p>From Verified ID to our worldwide customer support team, we've got your back.</p>
+      <p><a href="#">Learn about trust at Airbnb</a></p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- table tryout -->
+  <div class="panel panel-primary">
+              <div class="panel-body" style="max-height: 10;overflow-y: scroll;">fdoinfds sdofjohisdfj</div>
+              
+  </div>
+ <!-- table tryout -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
      <script>
