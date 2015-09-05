@@ -67,8 +67,14 @@
     <div class="main" ng-controller="MainCtrl">
       <div class="container" >
         <canvas id="line" class="chart chart-line" chart-data="data"
-        chart-labels="labels" chart-legend="true" chart-series="series"
-        chart-click="onClick" >
+        chart-labels="labels" chart-legend="false" chart-series="series"
+        chart-click="onClick" chart-options="{
+          scaleOverride : true,
+          scaleSteps : 10,
+          scaleStepWidth : 10,
+          scaleStartValue : 0,
+          bezierCurve : false
+        }">
         </canvas> 
         <p>{{ title }} </p>
       </div>
@@ -98,6 +104,7 @@
 
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/services/readMarket.js"></script>
         <!-- endbuild -->
 </body>
 </html>
