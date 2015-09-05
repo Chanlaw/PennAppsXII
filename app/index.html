@@ -56,15 +56,8 @@
       </div>
     </div>
 
-
-<div>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>`
-    </div>
-
     <div class="main" ng-controller="MainCtrl">
+      <h1> {{ market.market_name }} </h1>
       <div class="container" >
         <canvas id="line" class="chart chart-line" chart-data="data"
         chart-labels="labels" chart-legend="false" chart-series="series"
