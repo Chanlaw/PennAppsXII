@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -13,14 +13,17 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/angular-chart.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+    <link rel="stylesheet" href="styles/angular-chart.css">
     <script src="scripts/vendor/Chart.min.js"></script>
     <script src="scripts/vendor/angular-chart.js"></script>
 
+
     <!-- endbuild -->
   </head>
-  <body ng-app="app">
+  <body ng-app="appApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -53,18 +56,23 @@
       </div>
     </div>
 
-    <div class="container" ng-controller="main">
+
+<div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>`
+    </div>
+
+    <div class="main" ng-controller="MainCtrl">
+      <div class="container" >
         <canvas id="line" class="chart chart-line" chart-data="data"
         chart-labels="labels" chart-legend="true" chart-series="series"
         chart-click="onClick" >
-        
-      </canvas> 
-      <div ng-repeat="serie in series">
-        <p> yay </p>
-
+        </canvas> 
+        <p>{{ title }} </p>
       </div>
     </div>
-
     <div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span></p>
@@ -88,10 +96,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
 </body>
 </html>

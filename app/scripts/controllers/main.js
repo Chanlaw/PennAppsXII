@@ -7,15 +7,13 @@
  * # MainCtrl
  * Controller of the pennAppsXiiApp
  */
-angular.module('app').controller("MainCtrl", function ($scope) {
+angular.module('appApp').controller('MainCtrl', function($scope) {
+	$scope.title = 'This is a test';
+  $scope.labels = [0,1,2,3,4,5];
+  $scope.series = ['Last Credence'];
+  $scope.data= [50,20,80,30,36,60];
 
-  $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-  $scope.series = ['Series A', 'Series B'];
-  $scope.data = [
-    [65, 59, 80, 81, 56, 55, 40],
-    [28, 48, 40, 19, 86, 27, 90]
-  ];
   $scope.onClick = function (points, evt) {
     console.log(points, evt);
-  };
+  }});
 

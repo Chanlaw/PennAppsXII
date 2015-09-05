@@ -1,5 +1,5 @@
 'use strict';
-angular.module("app", ["chart.js"]);
+var app = angular.module("appApp", ["chart.js"]);
              
 /**
  * @ngdoc overview
@@ -35,5 +35,5 @@ angular.module("app", ["chart.js"]);
       })
       .otherwise({
         redirectTo: '/'
-      }); */
-  });
+      }); 
+  });*/
