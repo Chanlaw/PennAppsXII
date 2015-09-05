@@ -1,5 +1,5 @@
 
-
+'use strict';
 /**
  * @ngdoc function
  * @name pennAppsXiiApp.controller: MainCtrl
@@ -12,10 +12,15 @@ angular.module('appApp').controller('MainCtrl', ['$scope','readMarket', function
   	$scope.title = 'This is a test';
     $scope.labels = [];
     $scope.series = ['Last Credence'];
-    innerdata = [];
+    $scope.innerdata = [];
     $scope.market=data;
-    $scope.data= [innerdata];
-
+    $scope.data= [$scope.innerdata];
+    var i = 0;
+    for (let prediction of $scope.market.predictions){
+      $scope.innerdata.push(prediction.price/10)
+      $scope.labels.push(i);
+      i++;
+    }
     });
 }]);
 
