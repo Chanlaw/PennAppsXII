@@ -6,25 +6,25 @@ public class User {
 	String name;
 	int score;
 	public static final int STARTING_SCORE = 0;
-	
+
 	public User(String name){
 		predictions = new ArrayList<Prediction>();
 		this.name = name;
 		score = User.STARTING_SCORE;
 	}
-	
+
 	public void add(Prediction p){
 		predictions.add(p);
 	}
-	
+
 	public void addScore(int i){
 		score += i;
 	}
-	
+
 	public int getScore(){
 		return score;
 	}
-	
+
 	public int hashcode(){
 		int i = 1;
 		i = (i + name.hashCode())* 31;
@@ -32,7 +32,7 @@ public class User {
 		i = (i+predictions.size());
 		return i;
 	}
-	
+
 	public boolean equals(User other){
 		if (this.hashCode() != other.hashcode())
 			return false;
@@ -41,5 +41,5 @@ public class User {
 		}
 		return true;
 	}
-	
+
 }
